@@ -8,6 +8,11 @@
   transition: 0.4s;
 }
 body {
+  /* overflow-x: hidden; */
+}
+.container {
+  width: 100%;
+  height: 100%;
   overflow-x: hidden;
 }
 :root {
@@ -25,7 +30,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(255, 255, 255, 0.432);
+  background-color: rgba(255, 255, 255, 0.61);
   filter: blur(5px);
   z-index: 5;
 }
@@ -99,11 +104,10 @@ nav {
 }
 .nav-btns {
   z-index: 10;
-  display: flex;
+  display: none;
   position: fixed;
   background-color: var(--lightGrey);
   right: 0;
-  margin-left: 500px;
   top: 0;
   align-items: end;
   bottom: 0;
@@ -535,9 +539,7 @@ footer {
     padding: 0.6rem 1.8rem;
     color: var(--white);
   }
-  .bac-img3 {
-    display: inline-block;
-  }
+
   /*  header  */
   nav {
     padding: 0rem 1.25rem;
@@ -546,11 +548,11 @@ footer {
     align-items: center;
   }
   .nav-btns {
+    display: flex;
     position: static;
     align-items: center;
     background-color: var(--white);
     flex-direction: row;
-    margin-left: 0;
     z-index: 0;
   }
   #changModeBtn {
@@ -757,5 +759,11 @@ footer {
   }
   .showcase-title {
     font-size: 3rem;
+  }
+}
+@media (max-width: 400px) {
+  .price-item-name,
+  .table-name {
+    display: none;
   }
 }

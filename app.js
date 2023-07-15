@@ -9,12 +9,12 @@ let width = 0
 let flag = true
 
 function openMenu() {
-    document.querySelector(".nav-btns").style.marginLeft = "0"
+    document.querySelector(".nav-btns").style.display = "flex"
     document.querySelector("#Screen-blur").style.display = "block"
 
 }
 function closeMenu() {
-    document.querySelector(".nav-btns").style.marginLeft = "500px"
+    document.querySelector(".nav-btns").style.display = "none"
     document.querySelector("#Screen-blur").style.display = "none"
 }
 // change mode
@@ -57,5 +57,10 @@ closeMenuBtn.addEventListener("click", function () {
 })
 
 window.addEventListener('resize', function () {
-    closeMenu()
+    if (this.window.innerWidth >= 768) {
+        document.querySelector(".nav-btns").style.display = "flex"
+    } else {
+        document.querySelector(".nav-btns").style.display = "none"
+
+    }
 });
